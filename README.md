@@ -54,3 +54,5 @@ Superstore Sales Profit Analysis/
 │
 ├── Superstore Sales Profit Dashboard.pbix
 └── README.md
+
+![Superstore Sales & Profit Analysis Dashboard](screenshot.png)
