@@ -1,58 +1,135 @@
 # Superstore Sales & Profit Analysis
 
-An end-to-end sales and profit analysis project using **PostgreSQL** and **Power BI** to identify profit trends, loss-making products, discount impact, and regional performance.
-
-## Tools & Technologies
-
-- PostgreSQL
-- SQL
-- Power BI
-- DAX
-- GitHub
+An end-to-end data analytics project using **PostgreSQL, SQL, Power BI, and DAX** to analyze sales performance, profitability, discount impact, and regional performance.
 
 ## Project Overview
 
-This project analyzes the Superstore dataset to understand sales performance and profitability across different regions, categories, sub-categories, and discount levels.
+This project analyzes the Superstore dataset to identify business performance trends and understand the factors associated with profitability.
 
-The analysis focuses on identifying:
-- High and low-performing product categories
+The analysis focuses on:
+
+- Sales and profit performance
+- Category and sub-category profitability
+- Regional performance
+- Discount and profit relationship
 - Loss-making sub-categories
-- The relationship between discounts and profit
-- Regional sales and profit performance
-- Potential discount scenarios and their impact on profit
+- High-discount risk areas
+- Discount optimization through What-If analysis
+- Data-driven business recommendations
+
+## Business Questions
+
+- Which sub-categories are generating losses?
+- Which regions are performing best and worst?
+- How are discount levels associated with profitability?
+- At what discount levels does profitability become negative?
+- Which areas require better pricing or discount control?
+- How can What-If analysis support discount decisions?
+
+## Tools & Technologies
+
+- **PostgreSQL** — SQL-based data analysis
+- **SQL** — Data exploration and business analysis
+- **Power BI** — Interactive dashboard and visualization
+- **DAX** — Measures and What-If analysis
+- **GitHub** — Project documentation and version control
 
 ## Key Insights
 
-- Tables and Bookcases were identified as major loss-making sub-categories.
-- Higher discount levels generally resulted in lower profitability for several products.
-- The West region generated strong sales and profit performance.
-- Discount scenario analysis was created in Power BI to understand how changing discount levels can affect profit.
+### 1. Tables is the biggest loss-making sub-category
 
-## Dashboard
+- Total sales: **$206.97K**
+- Total profit: **-$17.73K**
+- Average discount: **26.13%**
+- Tables generated the largest loss among the analyzed sub-categories.
 
-The Power BI dashboard provides interactive views of:
+### 2. Higher discounts are associated with lower profitability
 
-- Current Profit
-- Sales & Profit by Region
-- Category and Sub-Category Performance
-- Discount vs Profit Analysis
-- Discount Scenario Analysis
-- Profitability trends and loss areas
+- **0% discount** generated approximately **$320.99K** in total profit.
+- **30% discount** generated approximately **-$10.37K** in total profit.
+- **70% discount** generated approximately **-$40.08K** in total profit.
+- **80% discount** generated approximately **-$30.54K** in total profit.
+
+This indicates that excessive discounting is strongly associated with negative profitability in the dataset.
+
+### 3. Tables and Bookcases become unprofitable at higher discounts
+
+**Tables:**
+- 0% discount → **+$13.28K profit**
+- 20% discount → approximately **-$304**
+- 30% discount → **-$3.40K**
+- 40% discount → **-$16.19K**
+- 50% discount → **-$8.62K**
+
+**Bookcases:**
+- 0% discount → **+$6.08K profit**
+- 15% discount → **+$1.42K**
+- 20% discount → approximately **+$131**
+- 30% discount → **-$556**
+- 50% discount → **-$4.26K**
+- 70% discount → **-$3.89K**
+
+### 4. Central region needs attention
+
+- Total sales: **$501.24K**
+- Total profit: **$39.71K**
+- Average discount: **24.04%**
+- Central had the **highest average discount** and the **lowest total profit** among the four regions.
+
+### 5. West is the strongest-performing region
+
+- Total sales: **$725.46K**
+- Total profit: **$108.42K**
+- Average discount: **10.93%**
+- West generated the **highest total profit** while maintaining a comparatively lower average discount.
+
+## What-If Analysis
+
+A Power BI What-If analysis was created to evaluate how changes in discount levels could affect profitability.
+
+The interactive **Discount Scenario** parameter allows users to change the discount assumption and observe the resulting scenario profit.
+
+This provides a simple way to evaluate potential discount decisions and understand their possible impact on profitability.
 
 ## Business Recommendations
 
-- Review high-discount products that consistently generate losses.
-- Reduce unnecessary discounting on low-margin products.
-- Focus on profitable categories and regions.
-- Use scenario analysis before applying major discount changes.
-- Monitor loss-making sub-categories regularly.
+Based on the analysis:
+
+- Review and control excessive discounting, especially discounts of **30% or higher**.
+- Review pricing and discount strategies for loss-making sub-categories such as **Tables and Bookcases**.
+- Avoid applying large discounts to products or sub-categories with already weak margins.
+- Investigate the **Central region's** pricing and discount strategy.
+- Study the **West region** as a benchmark for stronger profitability with lower average discounting.
+- Use What-If analysis to evaluate discount scenarios before making pricing decisions.
+- Monitor loss-making sub-categories regularly to prevent continued margin erosion.
+
+## Dashboard
+
+The Power BI dashboard provides interactive analysis of:
+
+- Sales and profit KPIs
+- Category performance
+- Segment performance
+- Regional performance
+- Discount vs. profit
+- Sub-category profitability
+- Profitability trends
+- Business performance indicators
+
+![Superstore Sales & Profit Analysis Dashboard](Superstore_Dashboard.png)
+
+## What-If Analysis Dashboard
+
+The What-If page allows users to adjust the discount scenario and observe changes in scenario profit.
+
+![Discount What-If Analysis](Discount_What_If_Analysis.png)
 
 ## Project Structure
 
 ```text
 Superstore Sales Profit Analysis/
 │
-├── Superstore Sales Profit Dashboard.pbix
+├── Superstore_Sales_Profit_Dashboard.pbix
+├── Superstore_Dashboard.png
+├── Discount_What_If_Analysis.png
 └── README.md
-
-![Superstore Sales & Profit Analysis Dashboard](screenshot.png)
